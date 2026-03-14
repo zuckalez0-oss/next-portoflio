@@ -1,0 +1,14 @@
+name: portfolio-next
+region: nyc3
+services:
+  - name: web
+    github:
+      branch: main
+      repo: zuckalez0-oss/portoflio-next
+      deploy_on_push: true
+    build_command: npm run build
+    run_command: npm run start
+    environment_slug: node-js
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    http_port: 3000

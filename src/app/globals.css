@@ -232,6 +232,11 @@
     background: linear-gradient(180deg, color-mix(in oklab, var(--color-card) 92%, transparent), color-mix(in oklab, var(--color-secondary) 68%, transparent));
   }
 
+  .loading-dot {
+    @apply inline-block size-3 rounded-full bg-primary;
+    animation: pulse-dot 1.2s ease-in-out infinite;
+  }
+
   @media (max-width: 1023px) {
     .sharp-shadow,
     .sharp-shadow:hover,
@@ -240,6 +245,19 @@
       transform: none;
       box-shadow: 8px 8px 0 0 color-mix(in oklab, var(--color-primary) 24%, transparent);
     }
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 

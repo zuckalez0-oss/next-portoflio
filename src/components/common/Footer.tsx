@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Github, Linkedin, MessageSquare, Terminal } from "lucide-react";
 
 export function Footer() {
@@ -21,12 +22,12 @@ export function Footer() {
         </div>
 
         <div className="grid gap-3 sm:grid-cols-3">
-          <a
-            href="#contact"
+          <Link
+            href="/#contact"
             className="panel flex items-center gap-3 px-4 py-4 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
           >
             <MessageSquare className="size-4 text-primary" /> Contato
-          </a>
+          </Link>
           <a
             href="https://www.linkedin.com/in/matheus-ribeiro-bbb894237?utm_source=share_via&utm_content=profile&utm_medium=member_android"
             target="_blank"

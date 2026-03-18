@@ -19,35 +19,35 @@ export function HeroSection() {
     <section id="hero" className="relative overflow-hidden">
       <div className="hero-grid">
         <div className="relative z-10 flex flex-col justify-end">
-          <div className="data-chip mb-8 w-fit">
+          <div className="data-chip mb-6 w-fit sm:mb-8">
             <Sparkles className="size-3.5" />
             Portfolio orientado a backend engineering
           </div>
 
-          <p className="section-kicker mb-6">Matheus Augusto Ribeiro</p>
+          <p className="section-kicker mb-4 sm:mb-6">Matheus Augusto Ribeiro</p>
           <h1 className="hero-heading max-w-5xl text-foreground">
             Backend engineer com foco em arquitetura, dados e entrega confiavel.
           </h1>
 
-          <p className="mt-8 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">
+          <p className="mt-6 max-w-2xl text-sm leading-7 text-muted-foreground sm:mt-8 sm:text-lg sm:leading-8">
             Construo a camada que sustenta produtos: APIs, automacoes, integrações e sistemas preparados para manter performance,
             observabilidade e crescimento com codigo limpo.
           </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Button asChild size="lg" className="min-w-[220px] font-mono">
+          <div className="mt-8 flex flex-col gap-4 sm:mt-10 sm:flex-row">
+            <Button asChild size="lg" className="w-full min-w-0 font-mono sm:min-w-[220px] sm:w-auto">
               <Link href="#projects">
                 Ver projetos <ArrowDownRight className="size-4" />
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="min-w-[220px] font-mono">
+            <Button asChild variant="outline" size="lg" className="w-full min-w-0 font-mono sm:min-w-[220px] sm:w-auto">
               <a href="/Matheus_Ribeiro_Curriculo.pdf" target="_blank" rel="noopener noreferrer">
                 Abrir curriculo
               </a>
             </Button>
           </div>
 
-          <div className="mt-14 recruiter-grid">
+          <div className="mt-12 recruiter-grid sm:mt-14">
             {proofPoints.map((item) => (
               <div key={item.value} className="metric-card glass-card">
                 <div className="relative z-10">
@@ -60,7 +60,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <aside className="relative z-10 flex flex-col gap-5 self-end">
+        <aside className="relative z-10 flex flex-col gap-5 self-start lg:self-end">
           <div className="panel sharp-shadow glass-card p-6">
             <div className="eyebrow-line" />
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground">Why recruiters stop here</p>
@@ -73,7 +73,7 @@ export function HeroSection() {
             </ul>
           </div>
 
-          <div className="panel grid grid-cols-2 gap-px overflow-hidden border border-border bg-border">
+          <div className="panel grid grid-cols-1 gap-px overflow-hidden border border-border bg-border sm:grid-cols-2">
             <a
               href="https://github.com/zuckalez0-oss?tab=repositories"
               target="_blank"

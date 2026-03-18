@@ -42,18 +42,18 @@ export function SkillsSection() {
           </div>
 
           <div className="grid gap-8 xl:grid-cols-[1fr_320px]">
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
               {skillCategories.map((category) => {
                 const Icon = category.icon;
 
                 return (
                   <article key={category.title} className="panel sharp-shadow glass-card flex flex-col p-6 sm:p-7">
-                    <div className="flex items-center justify-between gap-4 border-b border-border pb-5">
+                    <div className="flex items-start justify-between gap-4 border-b border-border pb-5">
                       <div>
                         <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-muted-foreground">Cluster</p>
-                        <h3 className="mt-2 text-2xl tracking-[-0.05em]">{category.title}</h3>
+                        <h3 className="mt-2 text-xl tracking-[-0.05em] sm:text-2xl">{category.title}</h3>
                       </div>
-                      <span className="flex size-12 items-center justify-center border border-border bg-background/80">
+                      <span className="flex size-11 shrink-0 items-center justify-center border border-border bg-background/80 sm:size-12">
                         <Icon className="size-5 text-primary" />
                       </span>
                     </div>

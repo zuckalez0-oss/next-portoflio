@@ -31,7 +31,7 @@ export function ContactForm() {
 
           <div className="grid gap-8 xl:grid-cols-[0.86fr_1.14fr]">
             <aside className="panel sharp-shadow glass-card p-8 sm:p-10">
-              <p className="text-lg leading-8 text-muted-foreground">
+              <p className="text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
                 Se voce procura alguem com interesse real em backend, arquitetura e automacao aplicada a problemas concretos, esta
                 pagina ja resume bem minha direcao. O proximo passo pode ser uma conversa rapida.
               </p>
@@ -52,7 +52,7 @@ export function ContactForm() {
                   href="https://www.linkedin.com/in/matheus-ribeiro-bbb894237?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="panel flex items-center gap-3 px-4 py-4 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                  className="panel flex min-h-14 items-center gap-3 px-4 py-4 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
                 >
                   <Linkedin className="size-4 text-primary" /> LinkedIn
                 </a>
@@ -60,7 +60,7 @@ export function ContactForm() {
                   href="https://github.com/zuckalez0-oss?tab=repositories"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="panel flex items-center gap-3 px-4 py-4 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+                  className="panel flex min-h-14 items-center gap-3 px-4 py-4 text-sm text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
                 >
                   <Github className="size-4 text-primary" /> GitHub
                 </a>
@@ -89,7 +89,7 @@ export function ContactForm() {
               </div>
 
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                <Button type="submit" size="lg" className="font-mono">
+                <Button type="submit" size="lg" className="w-full font-mono sm:w-auto">
                   {status === "loading" ? "Enviando..." : "Iniciar conversa"}
                 </Button>
                 <p className="text-sm text-muted-foreground">Resposta visual simulada enquanto o backend do formulario nao esta conectado.</p>

@@ -17,13 +17,13 @@ export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border/80 bg-background/80 backdrop-blur-md">
       <div className="layout-shell flex h-[72px] items-center justify-between gap-6 py-4">
-        <Link href="/" className="flex items-center gap-3 text-sm font-mono uppercase tracking-[0.22em]">
-          <span className="flex size-10 items-center justify-center border border-border bg-card">
+        <Link href="/" className="flex min-w-0 items-center gap-3 text-sm font-mono uppercase tracking-[0.22em]">
+          <span className="flex size-10 shrink-0 items-center justify-center border border-border bg-card">
             <Terminal className="size-4" />
           </span>
-          <span className="flex flex-col leading-none">
-            <span className="text-foreground">Matheus Ribeiro</span>
-            <span className="text-[10px] text-muted-foreground">Backend Engineer</span>
+          <span className="flex min-w-0 flex-col leading-none">
+            <span className="truncate text-foreground text-[12px] sm:text-sm">Matheus Ribeiro</span>
+            <span className="truncate text-[9px] text-muted-foreground sm:text-[10px]">Backend Engineer</span>
           </span>
         </Link>
 
@@ -44,7 +44,7 @@ export function Header() {
 
         <button
           type="button"
-          className="flex size-11 items-center justify-center border border-border bg-card lg:hidden"
+          className="flex size-11 shrink-0 items-center justify-center border border-border bg-card lg:hidden"
           aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
           onClick={() => setIsOpen((current) => !current)}
         >

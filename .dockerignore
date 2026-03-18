@@ -1,0 +1,11 @@
+.git
+.github
+.next
+node_modules
+npm-debug.log
+Dockerfile*
+deploy
+README.md
+DEPLOYMENT_GUIDE.md
+DEPLOY_DROPLET.md
+.gitignore

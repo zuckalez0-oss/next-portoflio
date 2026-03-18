@@ -52,7 +52,7 @@ function ProjectCard({ project, index }: { project: ProjectType; index: number }
   return (
     <article className="panel sharp-shadow glass-card group overflow-hidden">
       <div className="grid gap-0 xl:grid-cols-[0.95fr_1.05fr]">
-        <div className="relative min-h-[260px] border-b border-border xl:min-h-full xl:border-r xl:border-b-0">
+        <div className="relative min-h-[220px] border-b border-border sm:min-h-[260px] xl:min-h-full xl:border-r xl:border-b-0">
           <Image
             src={project.imageUrl}
             alt={`Preview do projeto ${project.title}`}
@@ -66,14 +66,14 @@ function ProjectCard({ project, index }: { project: ProjectType; index: number }
           </div>
         </div>
 
-        <div className="flex flex-col p-6 sm:p-8">
+        <div className="flex flex-col p-5 sm:p-8">
           <div className="flex flex-wrap items-center gap-3">
             <span className="data-chip text-[10px]">Projeto selecionado</span>
             <span className="data-chip text-[10px]">Portfolio backend</span>
           </div>
 
-          <h3 className="mt-5 text-3xl tracking-[-0.05em]">{project.title}</h3>
-          <p className="mt-4 text-base leading-7 text-muted-foreground">{project.summary}</p>
+          <h3 className="mt-5 text-2xl tracking-[-0.05em] sm:text-3xl">{project.title}</h3>
+          <p className="mt-4 text-sm leading-7 text-muted-foreground sm:text-base">{project.summary}</p>
 
           <div className="mt-6 border-l border-primary pl-4">
             <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-primary">Por que importa</p>
@@ -88,16 +88,16 @@ function ProjectCard({ project, index }: { project: ProjectType; index: number }
             ))}
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-4 border-t border-border pt-6">
+          <div className="mt-8 flex flex-col gap-3 border-t border-border pt-6 sm:flex-row sm:flex-wrap sm:gap-4">
             {project.demoUrl && (
-              <Button variant="default" size="sm" asChild>
+              <Button variant="default" size="sm" asChild className="w-full sm:w-auto">
                 <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
                   Demo <ExternalLink className="size-3" />
                 </a>
               </Button>
             )}
             {project.repoUrl && (
-              <Button variant="outline" size="sm" asChild>
+              <Button variant="outline" size="sm" asChild className="w-full sm:w-auto">
                 <a href={project.repoUrl} target="_blank" rel="noopener noreferrer">
                   Repositorio <Github className="size-3" />
                 </a>
@@ -118,7 +118,7 @@ export function ProjectsGrid() {
           <p className="section-kicker sticky top-28">03 / Projetos</p>
         </div>
 
-        <div className="space-y-12">
+        <div className="space-y-10 sm:space-y-12">
           <div className="space-y-5">
             <p className="section-kicker">Provas de execucao</p>
             <h2 className="section-title">Projetos com narrativa mais clara para quem avalia potencial tecnico.</h2>

@@ -33,12 +33,12 @@ export function AboutMeSection() {
             <div className="panel sharp-shadow glass-card p-8 sm:p-10">
               <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
                 <div>
-                  <p className="text-lg leading-8 text-muted-foreground">
+                  <p className="text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
                     Sou estudante de Engenharia de Software com direcionamento claro para backend. Gosto de modelar a estrutura que faz
                     um produto funcionar de forma previsivel: regras de negocio, organizacao de camadas, persistencia de dados,
                     automacao de processos e integracao entre servicos.
                   </p>
-                  <p className="mt-6 text-lg leading-8 text-muted-foreground">
+                  <p className="mt-6 text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
                     Meu objetivo com cada projeto e transmitir maturidade tecnica mesmo em fases iniciais da carreira: codigo legivel,
                     decisao consciente de stack e entrega que conversa com problemas reais de operacao.
                   </p>
@@ -74,7 +74,7 @@ export function AboutMeSection() {
               </div>
             </div>
 
-            <div className="panel sharp-shadow glass-card relative min-h-[420px] overflow-hidden">
+            <div className="panel sharp-shadow glass-card relative min-h-[360px] overflow-hidden sm:min-h-[420px]">
               <Image
                 src="/images/foto-de-perfil2.jpeg"
                 alt="Foto de Matheus Ribeiro"
@@ -83,13 +83,13 @@ export function AboutMeSection() {
                 sizes="(max-width: 1280px) 100vw, 35vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/28 to-transparent" />
-              <div className="absolute left-6 top-6 border border-border bg-background/80 px-4 py-3 backdrop-blur-sm">
+              <div className="absolute left-4 top-4 right-4 border border-border bg-background/80 px-4 py-3 backdrop-blur-sm sm:left-6 sm:top-6 sm:right-auto">
                 <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-muted-foreground">System note</p>
                 <p className="mt-2 max-w-[22ch] text-sm leading-6">Pronto para contribuir em APIs, automacoes e plataformas internas.</p>
               </div>
-              <div className="absolute bottom-6 left-6 right-6 border border-border bg-card/85 p-5 backdrop-blur-sm">
+              <div className="absolute bottom-4 left-4 right-4 border border-border bg-card/85 p-4 backdrop-blur-sm sm:bottom-6 sm:left-6 sm:right-6 sm:p-5">
                 <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-primary">Current focus</p>
-                <p className="mt-3 text-lg font-medium leading-7">
+                <p className="mt-3 text-base font-medium leading-7 sm:text-lg">
                   Back-end moderno com Python, Java e integrações que resolvem fluxo operacional.
                 </p>
               </div>

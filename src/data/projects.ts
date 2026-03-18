@@ -69,10 +69,10 @@ export const projects: Project[] = [
     period: "Projeto utilitario",
     role: "Produto, experiencia de desenvolvedor e implementacao",
     status: "Pronto para expansao",
-    imageUrl: "/images/projects/promptmaster.png",
+    imageUrl: "/images/projects/promptMaster.png",
     gallery: [
       {
-        src: "/images/projects/promptmaster.png",
+        src: "/images/projects/promptMaster.png",
         alt: "Imagem de capa do PromptMaster representando a ferramenta em contexto de terminal.",
       },
     ],

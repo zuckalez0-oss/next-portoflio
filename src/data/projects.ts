@@ -59,6 +59,7 @@ export const projects: Project[] = [
     ],
     links: [{ label: "Repositorio", href: "https://github.com/zuckalez0-oss/DBX-V2" }],
   },
+
   {
     slug: "promptmaster",
     title: "PromptMaster",
@@ -238,6 +239,66 @@ export const projects: Project[] = [
       { label: "Projeto online", href: "https://lypsyos.com" },
     ],
   },
+
+  {
+  slug: "dashboard-desenhos-orcamentos",
+  title: "Controle de Desenhos e Orçamentos",
+  summary: "Painel operacional conectado ao Google Sheets para gestão e acompanhamento de demandas de desenhos técnicos e orçamentos industriais.",
+  impact:
+    "Transforma planilhas operacionais em uma interface visual fluida, permitindo acompanhar o status de projetos e métricas em tempo real sem atrito.",
+  tagline: "Gestão visual e simplificada de demandas de engenharia integradas via planilha.",
+  period: "Projeto autoral (Versão 2.0.0)",
+  role: "Desenvolvimento UI/UX e Integração",
+  status: "Em produção",
+  imageUrl: "/images/projects/controle-de-desenhos.png",
+  gallery: [
+    {
+      src: "/images/projects/controle-de-desenhos.png",
+      alt: "Tela do dashboard Controle de Desenhos e Orçamentos, exibindo métricas diárias, filtros avançados e tabela de registros conectada ao Google Sheets.",
+    },
+  ],
+  techStack: ["JavaScript/TypeScript", "Google Sheets API", "Frontend Web"],
+  highlights: [
+    { label: "Foco", value: "Gestão de demandas operacionais" },
+    { label: "Stack", value: "Web UI + Google Sheets" },
+    { label: "Valor", value: "Controle visual e filtros em tempo real" },
+  ],
+  challenge: [
+    "Criar uma interface ágil e moderna para o controle de projetos de corte a laser e plasma, sem forçar a equipe a abandonar a base de dados legada em planilhas.",
+    "Garantir que a leitura de dados suporte métricas instantâneas (pendentes, concluídos) e filtros complexos (por status, vendedor, desenhista) em uma única tela.",
+  ],
+  solution: [
+    "Desenvolvimento de um painel web consumindo os dados diretamente do Google Sheets, atuando como um front-end dinâmico e otimizado.",
+    "Implementação de cards indicadores para a entrada do dia e uma tabela interativa que permite focar apenas nas solicitações que exigem ação imediata.",
+  ],
+  outcomes: [
+    "Aceleração drástica na consulta de status de projetos industriais e orçamentos.",
+    "Experiência de usuário (UX) muito superior à navegação direta em células, mantendo a simplicidade da manutenção dos dados na planilha original.",
+  ],
+  sections: [
+    {
+      title: "Contexto",
+      content: [
+        "Para organizar o fluxo do setor de engenharia e orçamentos, foi necessário evoluir o acompanhamento tático das demandas. A equipe precisava de clareza imediata sobre o que estava pendente, concluído ou aguardando link de pasta.",
+        "Como a operação já domina o Google Sheets para registros, a solução ideal foi construir um dashboard sobre essa infraestrutura. Ele consome os dados e entrega uma visão corporativa e limpa para o dia a dia.",
+      ],
+    },
+    {
+      title: "Decisões técnicas",
+      content: [
+        "A arquitetura foi pensada para separar completamente a visualização da persistência. O front-end lida com a reatividade, paginação e filtros cruzados (processo, status, cidade, gerente), enquanto o Google Sheets serve como um banco de dados acessível.",
+        "O design inclui feedback visual rápido (tags de status, ícones) e um modal lateral de detalhes, garantindo que o usuário tenha o panorama geral e as informações específicas de cada projeto na mesma tela.",
+      ],
+    },
+  ],
+  testSteps: [
+    "Configurar as credenciais da API e o ID da planilha do Google Sheets no ambiente do projeto.",
+    "Iniciar o servidor de desenvolvimento do painel web.",
+    "Validar a renderização dos cards (Solicitações hoje, Pendentes, Prontos) de acordo com os dados inseridos na planilha.",
+    "Aplicar filtros no cabeçalho (ex: Filtrar por 'Apenas orçamento') e verificar a resposta e o detalhamento no painel lateral.",
+  ],
+  links: [],
+},
 ];
 
 export function getProjects() {

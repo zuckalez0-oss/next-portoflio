@@ -13,6 +13,15 @@ export type ProjectLink = {
   href: string;
 };
 
+// NOVA ESTRUTURA PARA O IMPACTO DE NEGÓCIOS
+export type BusinessImpact = {
+  sectionTitle: string;
+  columns: {
+    title: string;
+    content: string;
+  }[];
+};
+
 export type Project = {
   slug: string;
   title: string;
@@ -33,7 +42,13 @@ export type Project = {
   solution: string[];
   outcomes: string[];
   sections: ProjectSection[];
-  testSteps: string[];
+  
+  // ADICIONAMOS O '?' PARA TORNAR OPCIONAL
+  testSteps?: string[]; 
+  
+  // ADICIONAMOS A NOVA PROPRIEDADE COMO OPCIONAL
+  businessImpact?: BusinessImpact; 
+  
   verificationNote?: string;
   links: ProjectLink[];
 };

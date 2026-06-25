@@ -86,33 +86,54 @@ export function ProjectDetailPage({
         </div>
       </ProjectSection>
 
-      <ProjectSection kicker="03 / Teste" title="Como avaliar o projeto de forma objetiva.">
-        <div className="grid gap-6 xl:grid-cols-[0.9fr_1.1fr]">
-          <article className="panel sharp-shadow glass-card p-6 sm:p-8">
-            <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-primary">Passos de validacao</p>
-            <ol className="mt-4 space-y-4">
-              {project.testSteps.map((step, index) => (
-                <li key={step} className="flex gap-4 text-sm leading-7 text-muted-foreground">
-                  <span className="font-mono text-primary">0{index + 1}</span>
-                  <span>{step}</span>
-                </li>
-              ))}
-            </ol>
-          </article>
+      {/* BLOCO CONDICIONAL: Só renderiza se for um projeto com testSteps */}
+      {project.testSteps && project.testSteps.length > 0 && (
+        <ProjectSection kicker="03 / Teste" title="Como avaliar o projeto de forma objetiva.">
+          <div className="grid gap-6 xl:grid-cols-[0.9fr_1.1fr]">
+            <article className="panel sharp-shadow glass-card p-6 sm:p-8">
+              <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-primary">Passos de validacao</p>
+              <ol className="mt-4 space-y-4">
+                {project.testSteps.map((step, index) => (
+                  <li key={step} className="flex gap-4 text-sm leading-7 text-muted-foreground">
+                    <span className="font-mono text-primary">0{index + 1}</span>
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ol>
+            </article>
 
-          <article className="panel sharp-shadow glass-card p-6 sm:p-8">
-            <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-primary">Leitura para recrutadores</p>
-            <p className="mt-4 text-sm leading-7 text-muted-foreground">
-              Esta secao ajuda a transformar o projeto em evidencia concreta de execucao: stack usada, contexto resolvido, forma de validacao e links para aprofundamento tecnico.
-            </p>
-            {project.verificationNote && (
-              <div className="mt-6 border border-primary/35 bg-primary/10 px-4 py-4 text-sm leading-7 text-primary">
-                {project.verificationNote}
-              </div>
-            )}
-          </article>
-        </div>
-      </ProjectSection>
+            <article className="panel sharp-shadow glass-card p-6 sm:p-8">
+              <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-primary">Leitura para recrutadores</p>
+              <p className="mt-4 text-sm leading-7 text-muted-foreground">
+                Esta secao ajuda a transformar o projeto em evidencia concreta de execucao: stack usada, contexto resolvido, forma de validacao e links para aprofundamento tecnico.
+              </p>
+              {project.verificationNote && (
+                <div className="mt-6 border border-primary/35 bg-primary/10 px-4 py-4 text-sm leading-7 text-primary">
+                  {project.verificationNote}
+                </div>
+              )}
+            </article>
+          </div>
+        </ProjectSection>
+      )}
+
+      {/* BLOCO CONDICIONAL: Só renderiza se for um projeto com businessImpact */}
+      {project.businessImpact && (
+        <ProjectSection kicker="03 / Impacto" title={project.businessImpact.sectionTitle}>
+          <div className="grid gap-6 xl:grid-cols-2">
+            {project.businessImpact.columns.map((column, index) => (
+              <article key={index} className="panel sharp-shadow glass-card p-6 sm:p-8">
+                <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-primary">
+                  {column.title}
+                </p>
+                <p className="mt-4 text-sm leading-7 text-muted-foreground">
+                  {column.content}
+                </p>
+              </article>
+            ))}
+          </div>
+        </ProjectSection>
+      )}
 
       <ProjectSection kicker="04 / Navegacao" title="Continue explorando outros projetos do portfolio.">
         <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">

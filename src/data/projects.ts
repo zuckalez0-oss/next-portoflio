@@ -3,7 +3,7 @@ import { Project } from "@/types/project";
 export const projects: Project[] = [
   {
     slug: "dbx-v2",
-    title: "DBX V2",
+    title: "DBX",
     summary: "Sistema para gestao de desenhos tecnicos com foco em organizacao operacional e escalabilidade.",
     impact:
       "Mostra capacidade de estruturar dominio, persistencia e fluxo de trabalho em um produto mais proximo do mundo real.",
@@ -15,7 +15,7 @@ export const projects: Project[] = [
     gallery: [
       {
         src: "/images/projects/dbx-v2.png",
-        alt: "Tela do projeto DBX V2 destacando a interface principal da plataforma.",
+        alt: "Tela do projeto DBX destacando a interface principal da plataforma.",
       },
     ],
     techStack: ["Python", "TypeScript", "FastAPI", "PostgreSQL"],
@@ -40,7 +40,7 @@ export const projects: Project[] = [
       {
         title: "Contexto",
         content: [
-          "O DBX V2 evoluiu para um desktop executavel voltado a engenharia e PCP, com foco em padronizar leitura de pedidos, organizacao de materiais e preparo tecnico de corte.",
+          "O DBX evoluiu para um desktop executavel voltado a engenharia e PCP, com foco em padronizar leitura de pedidos, organizacao de materiais e preparo tecnico de corte.",
           "O projeto se destaca por unir regras operacionais de fabrica a uma interface utilizavel no dia a dia, sem depender de ambiente Python instalado no cliente final.",
         ],
       },
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     ],
     testSteps: [
       "Baixar ou gerar o executavel a partir do projeto usando `pyinstaller main.spec`.",
-      "Manter `DBX-V2.0.4.exe`, `codigo_database.xlsx` e opcionalmente `dados_producao.xlsx` na mesma pasta.",
+      "Manter `DBX.exe`, `codigo_database.xlsx` e opcionalmente `dados_producao.xlsx` na mesma pasta.",
       "Executar o aplicativo no Windows e validar os fluxos de leitura de pedidos, otimizacao de corte e exportacao para Excel ou DXF.",
     ],
     links: [{ label: "Repositorio", href: "https://github.com/zuckalez0-oss/DBX-V2" }],
